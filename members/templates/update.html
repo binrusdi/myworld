@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Update Member</h1>
+        <form action="update_record/{{ my_members.id }}" method="post">
+        {% csrf_token %}
+        First Name: <br>
+        <input name="first" value="{{ my_members.firstname }}">
+        <br><br>
+        Last Name:<br>
+        <input name="last" value="{{ my_members.lastname }}">
+        <br><br>
+        <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>  

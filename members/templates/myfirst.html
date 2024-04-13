@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Members</h1>
+        <table border="1">
+            {% for x in my_members %}
+            <tr>
+                <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+                <td>{{ x.firstname }}</td>
+                <td>{{ x.lastname }}</td>
+                <td><a href="delete/{{x.id}}">Del</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+        <p>
+        <a href="add/">Add members</a>
+        </p>
+
+    </body>
+</html>
